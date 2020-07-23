@@ -23,6 +23,11 @@ class MockServices extends Location {
               description: 'Sitter info',
               text: 'Available: Wednesday',
               contact: 'Mobile number: 413-123-1345'),
+          LocationFact(
+              title: 'Holly',
+              description: 'Sitter info',
+              text: 'Available: Tuesday',
+              contact: 'Mobile number: 413-123-1345'),
         ]),
     Location(
         name: 'Elder Care',
@@ -31,12 +36,12 @@ class MockServices extends Location {
         facts: <LocationFact>[
           LocationFact(
               title: 'Julia',
-              description: 'Sitter info',
+              description: 'Helper info',
               text: 'Available: Monday',
               contact: 'Mobile number: 413-123-1345'),
           LocationFact(
               title: 'Bianca',
-              description: 'Sitter info',
+              description: 'Helper info',
               text: 'Available: Wednesday',
               contact: 'Mobile number: 413-123-1345'),
         ])

@@ -10,9 +10,8 @@ class LocationDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: Text(location.name)),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+        resizeToAvoidBottomPadding: false,
+        body: ListView(
           children: _renderBody(context, location),
         ));
   }
@@ -31,13 +30,14 @@ class LocationDetail extends StatelessWidget {
       result.add(_sectionDescription(location.facts[i].description));
       result.add(_sectionText(location.facts[i].text));
       result.add(_sectionContact(location.facts[i].contact));
+      result.add(_buttonTest(location.facts[i].button));
     }
     return result;
   }
 
   Widget _sectionTitle(String text) {
     return Container(
-        padding: EdgeInsets.fromLTRB(25.0, 25.0, 25.0, 10.0),
+        padding: EdgeInsets.fromLTRB(5.0, 5.0, 5.0, 10.0),
         child: Text(text,
             textAlign: TextAlign.center,
             style: TextStyle(
@@ -48,17 +48,35 @@ class LocationDetail extends StatelessWidget {
 
   Widget _sectionText(String text) {
     return Container(
-        padding: EdgeInsets.fromLTRB(25.0, 5.0, 25.0, 10.0), child: Text(text));
+        padding: EdgeInsets.fromLTRB(5.0, 5.0, 5.0, 10.0), child: Text(text));
   }
 
   Widget _sectionContact(String text) {
     return Container(
-        padding: EdgeInsets.fromLTRB(25.0, 5.0, 25.0, 10.0), child: Text(text));
+        padding: EdgeInsets.fromLTRB(5.0, 5.0, 5.0, 10.0), child: Text(text));
+  }
+
+  Widget _buttonTest(FlatButton text) {
+    return FlatButton(
+      color: Colors.blue,
+      textColor: Colors.white,
+      disabledColor: Colors.grey,
+      disabledTextColor: Colors.black,
+      padding: EdgeInsets.all(8.0),
+      splashColor: Colors.blueAccent,
+      onPressed: () {
+        print('ordered helper');
+      },
+      child: Text(
+        "Order sitter",
+        style: TextStyle(fontSize: 20.0),
+      ),
+    );
   }
 
   Widget _sectionDescription(String text) {
     return Container(
-        padding: EdgeInsets.fromLTRB(25.0, 5.0, 25.0, 10.0),
+        padding: EdgeInsets.fromLTRB(5.0, 5.0, 5.0, 10.0),
         child: Text(text,
             style: TextStyle(
               fontSize: 18.0,
