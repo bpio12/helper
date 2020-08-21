@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'models/location.dart';
 
+
 class LocationDetail extends StatelessWidget {
   final Location location;
 
   LocationDetail(this.location);
+
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +18,8 @@ class LocationDetail extends StatelessWidget {
           children: _renderBody(context, location),
         ));
   }
+
+  
 
   List<Widget> _renderBody(BuildContext context, Location location) {
     var result = List<Widget>();
