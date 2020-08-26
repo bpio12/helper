@@ -14,7 +14,11 @@ class HelperCategory extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemCount: _categories.length,
         itemBuilder: (BuildContext context, int index) {
-          return HelperCard();
+          return HelperCard(
+            categoryName: _categories[index].categoryName,
+            imagePath: _categories[index].imagePath,
+            numberOfItems: _categories[index].numberOfItems,
+          );
         },
       ),
     );
