@@ -1,7 +1,6 @@
-import 'package:crash_course2/location_detail.dart';
+import 'location_detail.dart';
 import 'package:flutter/material.dart';
 import 'models/location.dart';
-import 'location_detail.dart';
 import 'styles.dart';
 
 class LocationList extends StatelessWidget {
