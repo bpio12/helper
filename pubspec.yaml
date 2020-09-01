@@ -48,6 +48,7 @@ flutter:
     - assets/images/me.jpg
     - assets/images/baby.jpg
     - assets/images/elder.jpg
+    - assets/images/fillerSitter.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
