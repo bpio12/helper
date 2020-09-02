@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'homescreen.dart';
+import 'screens/main_screen.dart';
 
 class App extends StatelessWidget {
   @override
@@ -8,7 +8,7 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Helper: Find the care you need",
       theme: ThemeData(primaryColor: Colors.blueAccent),
-      home: HomeScreen(),
+      home: MainScreen(),
     );
   }
 }

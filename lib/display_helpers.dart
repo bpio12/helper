@@ -1,5 +1,5 @@
 import 'package:scoped_model/scoped_model.dart';
-import 'models/helper_model.dart';
+import 'src/models/helper_model.dart';
 import 'package:http/http.dart' as http;
 
 class HelperModel extends Model {

@@ -1,35 +1,20 @@
-class Helper {
-  final String id;
-  final String name;
-  final String imagePath;
-  final String category;
-  final double price;
-  final double ratings;
-
-  Helper(
-      {this.id,
-      this.name,
-      this.imagePath,
-      this.category,
-      this.price,
-      this.ratings});
-}
+import '../models/helper_model.dart';
 
 final helpers = [
   Helper(
     id: "1",
     name: "Bianca",
-    imagePath: "assets/images/boston",
+    imagePath: "assets/images/boston.jpg",
     category: "1",
-    price: 22.0,
-    ratings: 99.0,
+    price: 22,
+    ratings: 99,
   ),
   Helper(
     id: "2",
-    name: "Julia",
-    imagePath: "assets/images/me",
+    name: "Hannah",
+    imagePath: "assets/images/fillerSitter.jpg",
     category: "2",
-    price: 12.0,
-    ratings: 89.0,
+    price: 12,
+    ratings: 89,
   ),
 ];

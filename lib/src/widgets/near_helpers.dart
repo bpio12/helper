@@ -1,6 +1,21 @@
 import 'package:flutter/material.dart';
 
 class NearHelpers extends StatefulWidget {
+  final String id;
+  final String name;
+  final String imagePath;
+  final String category;
+  final double price;
+  final double ratings;
+
+  NearHelpers(
+      {this.id,
+      this.name,
+      this.imagePath,
+      this.category,
+      this.price,
+      this.ratings});
+
   @override
   _NearHelpersState createState() => _NearHelpersState();
 }
@@ -15,7 +30,7 @@ class _NearHelpersState extends State<NearHelpers> {
           height: 200.0,
           width: 340.0,
           child: Image.asset(
-            "assets/images/fillerSitter.jpg",
+            widget.imagePath,
             fit: BoxFit.cover,
           ),
         ),
@@ -43,7 +58,7 @@ class _NearHelpersState extends State<NearHelpers> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    "Brittany",
+                    widget.name,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 18.0,
@@ -81,7 +96,7 @@ class _NearHelpersState extends State<NearHelpers> {
                         width: 20.0,
                       ),
                       Text(
-                        "(22 reviews)",
+                        "(" + widget.ratings.toString() + " reviews)",
                         style: TextStyle(
                           color: Colors.grey,
                         ),
@@ -94,7 +109,7 @@ class _NearHelpersState extends State<NearHelpers> {
               Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: <Widget>[
-                    Text("\$22.00/hr",
+                    Text("\$" + widget.price.toString() + "/hr",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 18.0,
